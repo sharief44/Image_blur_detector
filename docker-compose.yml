@@ -1,0 +1,11 @@
+version: "3.8"
+
+services:
+  blur-detector:
+    build: .
+    container_name: blur-detector-app
+    ports:
+      - "8501:8501"
+    restart: unless-stopped
+    environment:
+      - STREAMLIT_SERVER_HEADLESS=true
